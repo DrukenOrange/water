@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>知识问答</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+    h1 { text-align: center; }
+    h2 { border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+    .question { margin-bottom: 15px; }
+    .options label { display: block; margin-left: 20px; }
+    textarea { width: 100%; }
+    button { padding: 8px 16px; margin-top: 10px; }
+    #result { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>知识问答</h1>
+  <form id="quizForm">
+    <h2>一、单选题</h2>
+    <div class="question" data-type="single" data-answer="B">
+      <p>1. 造血干细胞的主要来源是（ ）</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A"> A. 骨髓穿刺</label>
+        <label><input type="radio" name="q1" value="B"> B. 外周血（通过血液分离机）</label>
+        <label><input type="radio" name="q1" value="C"> C. 脐带血</label>
+        <label><input type="radio" name="q1" value="D"> D. 脑脊液</label>
+      </div>
+    </div>
+    <div class="question" data-type="single" data-answer="B">
+      <p>2. 非血缘关系造血干细胞配型成功的概率约为（ ）</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="A"> A. 千分之一</label>
+        <label><input type="radio" name="q2" value="B"> B. 万分之一至几十万分之一</label>
+        <label><input type="radio" name="q2" value="C"> C. 百分之一</label>
+        <label><input type="radio" name="q2" value="D"> D. 十分之一</label>
+      </div>
+    </div>
+    <div class="question" data-type="single" data-answer="B">
+      <p>3. 捐献前需注射的“动员剂”作用是（ ）</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="A"> A. 杀死病变细胞</label>
+        <label><input type="radio" name="q3" value="B"> B. 促使干细胞从骨髓迁移到外周血</label>
+        <label><input type="radio" name="q3" value="C"> C. 增强免疫力</label>
+        <label><input type="radio" name="q3" value="D"> D. 镇痛</label>
+      </div>
+    </div>
+    <div class="question" data-type="single" data-answer="C">
+      <p>4. 以下哪项是捐献的必要条件？（ ）</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="A"> A. 年龄≥55岁</label>
+        <label><input type="radio" name="q4" value="B"> B. 体重男＜50kg或女＜45kg</label>
+        <label><input type="radio" name="q4" value="C"> C. 符合献血健康标准</label>
+        <label><input type="radio" name="q4" value="D"> D. 无献血经历</label>
+      </div>
+    </div>
+    <div class="question" data-type="single" data-answer="B">
+      <p>5. 造血干细胞捐献后恢复周期约为（ ）</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="A"> A. 1-2天</label>
+        <label><input type="radio" name="q5" value="B"> B. 1-2周</label>
+        <label><input type="radio" name="q5" value="C"> C. 1-2个月</label>
+        <label><input type="radio" name="q5" value="D"> D. 1年</label>
+      </div>
+    </div>
+
+    <h2>二、判断题</h2>
+    <div class="question" data-type="judge" data-answer="×">
+      <p>6. 捐献造血干细胞会导致免疫力永久下降。</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="√"> √</label>
+        <label><input type="radio" name="q6" value="×"> ×</label>
+      </div>
+    </div>
+    <div class="question" data-type="judge" data-answer="×">
+      <p>7. 采集造血干细胞需进行开刀手术。</p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="√"> √</label>
+        <label><input type="radio" name="q7" value="×"> ×</label>
+      </div>
+    </div>
+    <div class="question" data-type="judge" data-answer="√">
+      <p>8. 成年后造血干细胞总量约为3千克。</p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="√"> √</label>
+        <label><input type="radio" name="q8" value="×"> ×</label>
+      </div>
+    </div>
+    <div class="question" data-type="judge" data-answer="×">
+      <p>9. 捐献者需自行承担体检和交通费用。</p>
+      <div class="options">
+        <label><input type="radio" name="q9" value="√"> √</label>
+        <label><input type="radio" name="q9" value="×"> ×</label>
+      </div>
+    </div>
+    <div class="question" data-type="judge" data-answer="√">
+      <p>10. 造血干细胞可治疗肝癌、胃癌等实体瘤。</p>
+      <div class="options">
+        <label><input type="radio" name="q10" value="√"> √</label>
+        <label><input type="radio" name="q10" value="×"> ×</label>
+      </div>
+    </div>
+
+    <h2>三、简答题</h2>
+    <div class="question" data-type="text">
+      <p>11. 请简述造血干细胞捐献对患者的意义。</p>
+      <textarea name="q11" rows="4"></textarea>
+      <p><strong>参考答案：</strong>造血干细胞移植可重建患者的造血和免疫系统，治愈白血病、再生障碍性贫血等恶性疾病，为无合适亲属供体的患者提供生存希望。</p>
+    </div>
+    <div class="question" data-type="text">
+      <p>12. 列举3项捐献造血干细胞的注意事项。</p>
+      <textarea name="q12" rows="4"></textarea>
+      <p><strong>参考示例：</strong>捐献前需充分了解流程并告知家人；采集过程中可能出现短暂低钙反应（如手脚麻木），可通过补钙缓解；捐献后需遵医嘱复查血常规。</p>
+    </div>
+
+    <button type="button" onclick="submitQuiz()">提交</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function submitQuiz() {
+      var qs = document.querySelectorAll('.question');
+      var score = 0, max = 0, detail = '';
+      qs.forEach(function(q, idx) {
+        var type = q.dataset.type;
+        if (type === 'single' || type === 'judge') {
+          max++;
+          var correct = q.dataset.answer;
+          var inputs = q.querySelectorAll('input[type=radio]');
+          var user = null;
+          inputs.forEach(function(inp) {
+            if (inp.checked) { user = inp.value; }
+          });
+          if (user === correct) {
+            score++;
+            detail += '<p>第 ' + (idx+1) + ' 题：正确</p>';
+          } else {
+            detail += '<p>第 ' + (idx+1) + ' 题：错误，正确答案是 ' + correct + '</p>';
+          }
+        }
+      });
+      document.getElementById('result').innerHTML =
+        '<h2>结果</h2>' +
+        '<p>得分：' + score + ' / ' + max + '</p>' +
+        detail;
+    }
+  </script>
+</body>
+</html>
